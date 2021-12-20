@@ -2,7 +2,7 @@ from flask import jsonify, request, Flask
 from catalog import get_products, create_product
 
 app = Flask(__name__)
-port=os.environ["PORT"]
+PORT=os.environ["PORT"]
 @app.route('/product', methods=['GET', 'POST'])
 def list_all_products():
 	'''This view manages the CRUD of products'''
